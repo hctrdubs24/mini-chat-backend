@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "build": "npm --prefix client install && npm run --prefix client build",
     "start": "node server/index.js",
