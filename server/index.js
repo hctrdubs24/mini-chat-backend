@@ -11,7 +11,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const server = http.createServer(app);
 const io = new SocketServer(server, {
   cors: {
-    origin: "*",
+    origin: "https://hctrdubs24.github.io/mini-chat-client/",
   },
 });
 // En el caso de origin de puede agregar un '*' para indicar que se puede conectar cualquiera
@@ -31,7 +31,7 @@ io.on("connection", (socket) => {
   });
 });
 
-app.use(express.static(join(__dirname, "../client/build")));
+// app.use(express.static(join(__dirname, "../client/build")));
 
 server.listen(process.env.PORT || 4000, () =>
   console.log(`Server listening on port ${process.env.PORT || 4000}`)
