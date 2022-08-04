@@ -11,7 +11,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const server = http.createServer(app);
 const io = new SocketServer(server, {
   cors: {
-    origin: "https://hctrdubs24.github.io/mini-chat-client/",
+    origin: "*",
   },
 });
 // En el caso de origin de puede agregar un '*' para indicar que se puede conectar cualquiera
